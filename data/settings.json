@@ -1,0 +1,5 @@
+{
+  "pin": "2519",
+  "lowStockThresholdDays": 10,
+  "defaultOrderTargetDays": 90
+}

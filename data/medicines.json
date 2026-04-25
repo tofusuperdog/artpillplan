@@ -1,0 +1,119 @@
+[
+  {
+    "id": "med_001",
+    "name": "Meditorl",
+    "strength": "250mg",
+    "pillsPerDay": 4,
+    "pillsPerStrip": 10,
+    "latestPricePerStrip": 37,
+    "currentPills": 50
+  },
+  {
+    "name": "Rosucor",
+    "strength": "10mg",
+    "pillsPerDay": 1,
+    "pillsPerStrip": 14,
+    "latestPricePerStrip": 200,
+    "currentPills": 204,
+    "id": "med_1777115704756"
+  },
+  {
+    "name": "Herbesser R100",
+    "strength": "",
+    "pillsPerDay": 2,
+    "pillsPerStrip": 10,
+    "latestPricePerStrip": 115,
+    "currentPills": 50,
+    "id": "med_1777115741664"
+  },
+  {
+    "name": "Methyldope",
+    "strength": "250mg",
+    "pillsPerDay": 2,
+    "pillsPerStrip": 10,
+    "latestPricePerStrip": 26,
+    "currentPills": 50,
+    "id": "med_1777115770135"
+  },
+  {
+    "name": "Caltab",
+    "strength": "1500mg",
+    "pillsPerDay": 1,
+    "pillsPerStrip": 10,
+    "latestPricePerStrip": 15,
+    "currentPills": 50,
+    "id": "med_1777115800660"
+  },
+  {
+    "name": "Prednisolone",
+    "strength": "5mg",
+    "pillsPerDay": 1,
+    "pillsPerStrip": 10,
+    "latestPricePerStrip": 50,
+    "currentPills": 50,
+    "id": "med_1777115887760"
+  },
+  {
+    "name": "Hydralazine",
+    "strength": "25mg",
+    "pillsPerDay": 4,
+    "pillsPerStrip": 10,
+    "latestPricePerStrip": 20,
+    "currentPills": 100,
+    "id": "med_1777115921645"
+  },
+  {
+    "name": "Madiplot",
+    "strength": "10mg",
+    "pillsPerDay": 1,
+    "pillsPerStrip": 10,
+    "latestPricePerStrip": 125,
+    "currentPills": 50,
+    "id": "med_1777115953821"
+  },
+  {
+    "name": "Keoconazole",
+    "strength": "",
+    "pillsPerDay": 1,
+    "pillsPerStrip": 10,
+    "latestPricePerStrip": 30,
+    "currentPills": 50,
+    "id": "med_1777115981743"
+  },
+  {
+    "name": "Prograf",
+    "strength": "1mg",
+    "pillsPerDay": 3,
+    "pillsPerStrip": 50,
+    "latestPricePerStrip": 4500,
+    "currentPills": 150,
+    "id": "med_1777116019844"
+  },
+  {
+    "name": "Prograf",
+    "strength": "0.5mg",
+    "pillsPerDay": 1,
+    "pillsPerStrip": 50,
+    "latestPricePerStrip": 2500,
+    "currentPills": 50,
+    "id": "med_1777116144447"
+  },
+  {
+    "name": "Myfortic",
+    "strength": "360mg",
+    "pillsPerDay": 2,
+    "pillsPerStrip": 120,
+    "latestPricePerStrip": 8500,
+    "currentPills": 50,
+    "id": "med_1777116190213"
+  },
+  {
+    "name": "Myfortic",
+    "strength": "180mg",
+    "pillsPerDay": 2,
+    "pillsPerStrip": 120,
+    "latestPricePerStrip": 5500,
+    "currentPills": 89,
+    "id": "med_1777116219510"
+  }
+]

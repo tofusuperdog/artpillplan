@@ -47,6 +47,7 @@ export default function MedicineFormPage() {
     const payload = {
       ...formData,
       id: isEdit ? id : `med_${Date.now()}`,
+      lastUpdated: new Date().toISOString(),
     };
 
     try {

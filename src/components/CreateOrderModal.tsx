@@ -4,7 +4,7 @@ import { useState, useMemo } from 'react';
 import { Medicine, Settings } from '@/lib/types';
 import Modal from './Modal';
 import { Copy, Check, Calendar, Timer } from 'lucide-react';
-import { addDays, format, differenceInDays } from 'date-fns';
+import { addDays, format, differenceInDays, differenceInCalendarDays } from 'date-fns';
 import { clsx } from 'clsx';
 
 import toast from 'react-hot-toast';
@@ -30,7 +30,11 @@ export default function CreateOrderModal({ isOpen, onClose, medicines, settings 
     if (isNaN(days) || days <= 0) return null;
 
     const items = medicines.map(med => {
-      const daysLeft = Math.floor(med.currentPills / med.pillsPerDay);
+      const daysPassed = differenceInCalendarDays(new Date(), new Date(med.lastUpdated));
+      const pillsConsumed = Math.max(0, daysPassed * med.pillsPerDay);
+      const currentPillsLive = Math.max(0, med.currentPills - pillsConsumed);
+      
+      const daysLeft = Math.floor(currentPillsLive / med.pillsPerDay);
       const daysToFill = days - daysLeft;
       
       if (daysToFill <= 0) return null;

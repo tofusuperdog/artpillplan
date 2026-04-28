@@ -6,6 +6,7 @@ export interface Medicine {
   pillsPerStrip: number;
   latestPricePerStrip: number;
   currentPills: number;
+  lastUpdated: string;
 }
 
 export interface Settings {

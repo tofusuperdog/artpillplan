@@ -19,6 +19,7 @@ export async function readMedicines(): Promise<Medicine[]> {
       pillsPerStrip: item.pillsPerStrip,
       latestPricePerStrip: item.latestPricePerStrip,
       currentPills: item.currentPills,
+      lastUpdated: item.lastUpdated || item.created_at || new Date().toISOString(),
     }));
   } catch (error) {
     console.error('Error reading medicines from Supabase:', error);

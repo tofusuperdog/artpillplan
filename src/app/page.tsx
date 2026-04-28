@@ -7,6 +7,7 @@ import StockAdjustModal from '@/components/StockAdjustModal';
 import CreateOrderModal from '@/components/CreateOrderModal';
 import { Plus, ShoppingCart, Loader2 } from 'lucide-react';
 import Link from 'next/link';
+import { calculateDaysLeft } from '@/lib/medicineUtils';
 
 export default function DashboardPage() {
   const [medicines, setMedicines] = useState<Medicine[]>([]);
@@ -53,7 +54,7 @@ export default function DashboardPage() {
     );
   }
 
-  const lowStockCount = settings ? medicines.filter(m => Math.floor(m.currentPills / m.pillsPerDay) < settings.lowStockThresholdDays).length : 0;
+  const lowStockCount = settings ? medicines.filter(m => calculateDaysLeft(m) < settings.lowStockThresholdDays).length : 0;
 
   return (
     <div className="p-6">

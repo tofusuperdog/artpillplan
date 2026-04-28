@@ -53,6 +53,8 @@ export default function StockAdjustModal({ isOpen, onClose, medicine, onUpdate }
       updatedMedicine.currentPills = actual;
     }
 
+    updatedMedicine.lastUpdated = new Date().toISOString();
+
     try {
       const res = await fetch('/api/medicines', {
         method: 'PUT',

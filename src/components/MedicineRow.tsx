@@ -2,8 +2,10 @@
 
 import { Medicine } from '@/lib/types';
 import { Edit2, Package, AlertCircle } from 'lucide-react';
-import { format, addDays } from 'date-fns';
+import { format, addDays, differenceInCalendarDays } from 'date-fns';
 import { clsx } from 'clsx';
+
+import { calculateLivePills, calculateDaysLeft } from '@/lib/medicineUtils';
 
 interface MedicineRowProps {
   medicine: Medicine;
@@ -13,9 +15,10 @@ interface MedicineRowProps {
 }
 
 export default function MedicineRow({ medicine, lowStockThresholdDays, onEdit, onStock }: MedicineRowProps) {
-  const daysLeft = Math.floor(medicine.currentPills / medicine.pillsPerDay);
+  const currentPillsLive = calculateLivePills(medicine);
+  const daysLeft = calculateDaysLeft(medicine);
   const lastUsableDate = addDays(new Date(), daysLeft);
-  const approxStrips = (medicine.currentPills / medicine.pillsPerStrip).toFixed(1);
+  const approxStrips = (currentPillsLive / medicine.pillsPerStrip).toFixed(1);
   const isLowStock = daysLeft < lowStockThresholdDays;
 
   return (
@@ -45,7 +48,7 @@ export default function MedicineRow({ medicine, lowStockThresholdDays, onEdit, o
 
       <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs font-medium text-emerald-700">
         <span className="flex items-center gap-1">
-          <span className="text-emerald-900 font-bold">{medicine.currentPills}</span> pills
+          <span className="text-emerald-900 font-bold">{currentPillsLive}</span> pills
         </span>
         <span className="flex items-center gap-1">
           <span className="text-emerald-900 font-bold">{approxStrips}</span> strips
